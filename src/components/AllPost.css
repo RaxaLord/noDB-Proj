@@ -1,0 +1,49 @@
+/* STYLING FOR ENTIRE POST CONTAINER */
+.posts {
+  width: 65vw;
+  height: 65%;
+  background-color: #282c34;
+  margin: auto;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-radius: 20px 0 20px 0;
+  overflow: auto;
+  box-shadow: 0 0 30px #282c34;
+}
+
+/* STYLING FOR INDIVIDUAL POSTS */
+.entries {
+  background-color: #3c3f58;
+  margin: 20px;
+  border-radius: 20px 0 20px 0;
+  padding: 10px;
+}
+
+/* TO ALIGN THE DATE/EDIT/DELETE */
+.post-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* DATE STYLING */
+span {
+  font-weight: lighter;
+  color: #3bba9c;
+}
+
+/* BUTTON STYLING */
+.post-header button {
+  background-color: #3bba9c;
+  border-radius: 5px 0 5px 0;
+  border-style: none;
+  margin: 2px;
+}
+.post-header button:hover {
+  color: white;
+  background-color: red;
+}
+
+/* BUTTON ALIGNMENT */
+.post-buttons {
+  display: flex;
+}
