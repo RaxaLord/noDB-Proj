@@ -2,7 +2,7 @@
 .posts {
   width: 65vw;
   height: 65%;
-  background-color: #282c34;
+  background-color: #3aafa9;
   margin: auto;
   padding-top: 20px;
   padding-bottom: 20px;
@@ -13,7 +13,7 @@
 
 /* STYLING FOR INDIVIDUAL POSTS */
 .entries {
-  background-color: #3c3f58;
+  background-color: #def2f1;
   margin: 20px;
   border-radius: 20px 0 20px 0;
   padding: 10px;
@@ -28,12 +28,13 @@
 /* DATE STYLING */
 span {
   font-weight: lighter;
-  color: #3bba9c;
+  color: #17242a;
 }
 
 /* BUTTON STYLING */
 .post-header button {
-  background-color: #3bba9c;
+  color: #3aafa9;
+  background-color: #2b7a77;
   border-radius: 5px 0 5px 0;
   border-style: none;
   margin: 2px;
@@ -44,6 +45,6 @@ span {
 }
 
 /* BUTTON ALIGNMENT */
-.post-buttons {
+/* .post-buttons {
   display: flex;
-}
+} */

@@ -1,39 +1,45 @@
-/* GENERAL STYLING FOR CONATINER */
+/* GENERAL STYLING FOR CONTAINER */
 form {
   /* background-color: brown; */
-  width: 50vw;
+  width: 60vw;
   margin: 25px auto;
   display: flex;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   border-radius: 10px;
+  box-shadow: 0 10px 30px black;
 }
 
 /* STYLING FOR INPUT FIELD */
-textarea {
-  width: 75%;
-  height: 100%;
-  background-color: #282c34;
-  border-radius: 10px;
+.entry-text {
+  width: 100%;
+  height: 5vh;
+  background-color: #17242a;
   border: none;
   font-size: 15px;
   text-align: center;
   text-overflow: auto;
   color: white;
+  resize: none;
+}
+
+.entry-text:focus {
+  outline: none;
 }
 
 /* STYLING FOR SUBMIT BUTTON */
 .submit-btn {
   width: 10%;
-  background-color: #282c34;
+  background-color: #17242a;
   border: none;
-  border-radius: 10px;
+  border-radius: 0 10px 10px 0;
   font-size: large;
   color: #3bba9c;
 }
 
 .submit-btn:hover {
   color: white;
-  background-color: #3bba9c;
+  background-color: #3aafa9;
+  cursor: pointer;
 }
 
 /* STYLING FOR DATE SELECTOR */
@@ -54,15 +60,16 @@ input[type="date"] {
   font-family: "Helvetica", arial, sans-serif;
   font-size: 18px;
   border: none;
-  background: #282c34;
+  background: #17242a;
   padding: 5px;
   display: inline-block !important;
   visibility: visible !important;
-  border-radius: 10px;
+  border-radius: 10px 0 0 10px;
 }
 
 input[type="date"],
 focus {
+  outline: none;
   color: #95a5a6;
   box-shadow: none;
   -webkit-box-shadow: none;

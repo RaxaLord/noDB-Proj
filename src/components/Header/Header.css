@@ -7,7 +7,7 @@
 
 header h1 {
   /* background-color: cadetblue; */
-  color: #707793;
+  color: #ffffff;
   font-size: 80px;
   font-family: "Merriweather", serif;
   font-weight: 900;
@@ -17,7 +17,7 @@ header h1 {
 
 header h3 {
   /* background-color: coral; */
-  color: white;
+  color: #3aafa9;
   font-size: 30px;
   position: absolute;
   top: 100px;

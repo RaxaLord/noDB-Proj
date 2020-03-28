@@ -2,9 +2,9 @@ import React, { Component } from "react";
 import "./App.css";
 import axios from "axios";
 // IMPORT ALL COMPONENTS
-import EntryForm from "./components/EntryForm";
-import AllPost from "./components/AllPost";
-import Header from "./components/Header";
+import EntryForm from "./components/Form/EntryForm";
+import Posts from "./components/Posts/Posts";
+import Header from "./components/Header/Header";
 
 export default class App extends Component {
   constructor() {
@@ -13,6 +13,7 @@ export default class App extends Component {
       posts: []
     };
     this.deletePost = this.deletePost.bind(this);
+    this.addPost = this.addPost.bind(this);
     this.editPost = this.editPost.bind(this);
   }
 
@@ -33,15 +34,34 @@ export default class App extends Component {
     });
   }
 
-  // this function will allow editing of the content
-  editPost(id) {}
+  // this function will add new posts to the page
+  addPost(date, content) {
+    axios.post("/api/add_post", { date, content }).then(res => {
+      this.setState({
+        posts: res.data
+      });
+    });
+  }
+
+  // this function will allow editing of posts
+  editPost(id, content) {
+    axios.put(`api/edit_post/${id}`, { content }).then(res => {
+      this.setState({
+        posts: res.data
+      });
+    });
+  }
 
   render() {
     return (
       <div className="App">
         <Header />
-        <AllPost deletePost={this.deletePost} posts={this.state.posts} />
-        <EntryForm />
+        <Posts
+          editPost={this.editPost}
+          deletePost={this.deletePost}
+          posts={this.state.posts}
+        />
+        <EntryForm addPost={this.addPost} />
       </div>
     );
   }

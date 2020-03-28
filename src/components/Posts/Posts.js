@@ -3,7 +3,7 @@ import DeleteButton from "./DeleteButton";
 import EditButton from "./EditButton";
 import Date from "./Date";
 import Entry from "./Entry";
-import "./AllPost.css";
+import "./Posts.css";
 
 export default function AllPost(props) {
   const mappedPosts = props.posts.map(elem => {
@@ -12,21 +12,23 @@ export default function AllPost(props) {
         <div className="post-header">
           <Date date={elem.date} />
 
-          <div className="post-buttons">
-            <EditButton
-              id={elem.id}
-              editPost={props.deletePost}
-              edit={"Edit"}
-            />
-            <DeleteButton
-              id={elem.id}
-              deletePost={props.deletePost}
-              delete={"Delete"}
-            />
-          </div>
+          {/* <div className="post-buttons"> */}
+          <DeleteButton
+            id={elem.id}
+            deletePost={props.deletePost}
+            delete={"Delete"}
+          />
         </div>
+        {/* </div> */}
 
-        <Entry content={elem.content} />
+        <EditButton
+          content={elem.content}
+          id={elem.id}
+          editPost={props.editPost}
+          edit={"Edit"}
+        />
+
+        {/* <Entry content={elem.content} /> */}
       </div>
     );
   });

@@ -1,0 +1,32 @@
+.text-area {
+  width: 99%;
+  height: 10vh;
+  font-size: 18px;
+  resize: none;
+}
+
+.cancel-btn {
+  width: 50%;
+  color: #3aafa9;
+  background-color: #2b7a77;
+  border-radius: 5px 0 5px 0;
+  border-style: none;
+  margin: 2px;
+}
+.cancel-btn:hover {
+  color: white;
+  background-color: red;
+}
+
+.accept-btn {
+  width: 49%;
+  color: #3aafa9;
+  background-color: #2b7a77;
+  border-radius: 5px 0 5px 0;
+  border-style: none;
+  margin: 2px;
+}
+.accept-btn:hover {
+  color: white;
+  background-color: green;
+}
