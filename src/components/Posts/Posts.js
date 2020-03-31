@@ -2,7 +2,7 @@ import React from "react";
 import DeleteButton from "./DeleteButton";
 import EditButton from "./EditButton";
 import Date from "./Date";
-import Entry from "./Entry";
+// import Entry from "./Entry";
 import "./Posts.css";
 
 export default function AllPost(props) {

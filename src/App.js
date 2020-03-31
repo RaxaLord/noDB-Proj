@@ -18,38 +18,50 @@ export default class App extends Component {
   }
 
   componentDidMount() {
-    axios.get("/api/posts").then(res => {
-      this.setState({
-        posts: res.data
-      });
-    });
+    axios
+      .get("/api/posts")
+      .then(res => {
+        this.setState({
+          posts: res.data
+        });
+      })
+      .catch(err => console.log("error"));
   }
 
   // this function will delete whatever elem is clicked via id
   deletePost(id) {
-    axios.delete(`api/delete_post/${id}`).then(res => {
-      this.setState({
-        posts: res.data
-      });
-    });
+    axios
+      .delete(`api/delete_post/${id}`)
+      .then(res => {
+        this.setState({
+          posts: res.data
+        });
+      })
+      .catch(err => console.log("error"));
   }
 
   // this function will add new posts to the page
   addPost(date, content) {
-    axios.post("/api/add_post", { date, content }).then(res => {
-      this.setState({
-        posts: res.data
-      });
-    });
+    axios
+      .post("/api/add_post", { date, content })
+      .then(res => {
+        this.setState({
+          posts: res.data
+        });
+      })
+      .catch(err => console.log("error"));
   }
 
   // this function will allow editing of posts
   editPost(id, content) {
-    axios.put(`api/edit_post/${id}`, { content }).then(res => {
-      this.setState({
-        posts: res.data
-      });
-    });
+    axios
+      .put(`api/edit_post/${id}`, { content })
+      .then(res => {
+        this.setState({
+          posts: res.data
+        });
+      })
+      .catch(err => console.log("error"));
   }
 
   render() {

@@ -31,6 +31,9 @@ module.exports = {
       return +elem.id === +req.params.id;
     });
     posts.splice(index, 1);
-    res.status(200).send(posts);
+    res
+      .status(200)
+      .send(posts)
+      .catch(400);
   }
 };

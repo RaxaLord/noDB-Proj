@@ -1,32 +1,80 @@
 .text-area {
   width: 99%;
-  height: 10vh;
+  height: 125px;
   font-size: 18px;
   resize: none;
 }
 
+.edit-button-container {
+  display: flex;
+  justify-content: center
+}
+
 .cancel-btn {
-  width: 50%;
-  color: #3aafa9;
+  width: 10%;
+  color: white;
   background-color: #2b7a77;
   border-radius: 5px 0 5px 0;
   border-style: none;
   margin: 2px;
+  font-size: 18px;
+  transition-property: width;
+  transition-duration: 2s
 }
 .cancel-btn:hover {
   color: white;
   background-color: red;
+  width: 88%
 }
 
 .accept-btn {
-  width: 49%;
-  color: #3aafa9;
+  width: 10%;
+  color: white;
   background-color: #2b7a77;
   border-radius: 5px 0 5px 0;
   border-style: none;
   margin: 2px;
+  font-size: 18px;
+  transition-property: width;
+  transition-duration: 2s
 }
 .accept-btn:hover {
   color: white;
-  background-color: green;
+  background-color: #81d3eb;
+  width: 88%
+}
+
+/* Tooltip container */
+.tooltip {
+  position: relative;
+  display: inline-block;
+  /* border-bottom: 1px dotted black; If you want dots under the hoverable text */
+}
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 225px;
+  bottom: 100%;
+  background-color: #2b7a77;
+  color: whitesmoke;
+  text-align: center;
+  padding: 2px 0;
+  border-radius: 10px 0 10px 0;
+  font-size: 12px;
+  /* font-weight: bold; */
+
+  /* Position the tooltip text - see examples below! */
+  position: absolute;
+  z-index: 1;
+
+  opacity: 0;
+  transition: opacity 1s;
+  transition-delay: 5s
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
 }
